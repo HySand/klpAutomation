@@ -266,10 +266,10 @@ class KLPBBSTasks:
             # if "立即申请" not in res.text and "进行中的任务" in res.text:
             #     return True
 
-    except Exception as e:
-        logging.error(f"[主账号] 检查进行中任务异常: {e}")
-    
-    return False
+        except Exception as e:
+            logging.error(f"[主账号] 检查进行中任务异常: {e}")
+        
+        return False
 
     def _proxy_click(self, proxy_url):
         proxies = {"http": proxy_url, "https": proxy_url}
